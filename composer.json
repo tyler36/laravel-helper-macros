@@ -8,7 +8,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "impbob\\laravel-helpers\\": "src/"
+            "tyler36\\laravel-helpers\\": "src/"
         }
     },
     "minimum-stability": "stable"
