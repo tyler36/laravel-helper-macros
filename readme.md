@@ -86,9 +86,11 @@ $errors->ifAny(function(){
 
 #### mapToAssoc
 Convert collection to associative array
+Inspired by [Customizing Keys When Mapping Collections](https://adamwathan.me/2016/07/14/customizing-keys-when-mapping-collections/)
+
 ```
 $emailLookup = $employees->mapToAssoc(function ($employee) {
-    return [$employee['email'], $employee['name']];    
+    return [$employee['email'], $employee['name']];
 });
 ```
 
