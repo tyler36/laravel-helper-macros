@@ -1,5 +1,6 @@
 <?php
-use tyler36\HelperMacros\Helper;
+
+use tyler36\laravelHelpers\Helper;
 
 /**
  * Class ValidatorTest

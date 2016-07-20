@@ -1,5 +1,5 @@
 {
-    "name": "tyler36/laravel-helper-macros",
+    "name": "tyler36/laravel-helpers",
     "description": "Collection of Helpers and macros for Laravel",
     "require-dev": {
         "phpunit/phpunit": "^5.4",
@@ -8,7 +8,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "tyler36\\laravel-helpers\\": "src/"
+            "Tyler36\\laravelHelpers\\": "src/"
         }
     },
     "minimum-stability": "stable"

@@ -11,7 +11,7 @@
 2.Add package to `config/app.php`
 
 ```
-    tyler36\HelperMacros\HelperMacrosServiceProvider::class,
+    Tyler36\laravelHelpers\LaravelHelperServiceProvider::class,
 ```
 
  ---
@@ -24,13 +24,13 @@ Uses Laravel Validator class to validate anything.
 EG. Validate Date (expects FALSE):
 
 ```
-    tyler36\HelperMacros\Helper::validate('20150230', 'date');
+    tyler36\laravelHelpers\Helper::validate('20150230', 'date');
 ```
 
 EG. Validate Date (expects TRUE):
 
 ```
-    tyler36\HelperMacros\Helper::validate('20150230', 'date');
+    tyler36\laravelHelpers\Helper::validate('20150230', 'date');
 ```
 
 

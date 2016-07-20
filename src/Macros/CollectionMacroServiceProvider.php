@@ -1,6 +1,6 @@
 <?php
 
-namespace tyler36\HelperMacros;
+namespace Tyler36\laravelHelpers;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
