@@ -83,6 +83,16 @@ $errors->ifAny(function(){
 });
 ```
 
+
+#### mapToAssoc
+Convert collection to associative array
+```
+$emailLookup = $employees->mapToAssoc(function ($employee) {
+    return [$employee['email'], $employee['name']];    
+});
+```
+
+
 ### Response
 These macros help to standardize **api json response** returns throughout the application.
 Inspired by [Laravel Response Macros for APIs](https://blog.jadjoubran.io/2016/03/27/laravel-response-macros-api/)

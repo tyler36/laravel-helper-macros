@@ -96,5 +96,32 @@ class CollectionMacroServiceProvider extends ServiceProvider
                 return Validator::make($item, $rules)->passes();
             });
         });
+
+
+
+
+        /**
+         * Convert key / value pair to associate array
+         *
+         * @return \Illuminate\Support\Collection
+         */
+        Collection::macro('toAssoc', function () {
+            return $this->reduce(function ($assoc, $keyValuePair) {
+                list($key, $value) = $keyValuePair;
+                $assoc[$key] = $value;
+                return $assoc;
+            }, new static);
+        });
+
+
+        /**
+         * Map key / pair to associate array
+         *
+         * @param  $callback $callback
+         * @return \Illuminate\Support\Collection
+         */
+        Collection::macro('mapToAssoc', function ($callback) {
+            return $this->map($callback)->toAssoc();
+        });
     }
 }

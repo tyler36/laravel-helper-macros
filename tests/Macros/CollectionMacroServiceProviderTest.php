@@ -184,4 +184,75 @@ class CollectionMacroServiceProviderTest extends TestCase
             $items->passes(['created_at' => 'date'])->all()
         );
     }
+
+
+    /**
+     * TEST:        toAssoc
+     *
+     * @group toAssoc
+     */
+    public function testToAssoc()
+    {
+        // SETUP:       Expected result
+        $expected = collect([
+            'john@example.com' => 'John',
+            'jane@example.com' => 'Jane',
+            'dave@example.com' => 'Dave',
+        ]);
+
+
+        // GET:         Associate Array
+        $lookup = collect([
+            ['john@example.com', 'John'],
+            ['jane@example.com', 'Jane'],
+            ['dave@example.com', 'Dave'],
+        ])->toAssoc();
+
+
+        // ASSERT:      Equals
+        $this->assertEquals($expected, $lookup);
+    }
+
+
+    /**
+     * TEST:        toAssoc
+     *
+     * @group toAssoc
+     */
+    public function testMapToAssoc()
+    {
+        // SETUP:       Expected result
+        $expected = collect([
+            'john@example.com' => 'John',
+            'jane@example.com' => 'Jane',
+            'dave@example.com' => 'Dave',
+        ]);
+
+        // SETUP:       Collection
+        $employees = collect([
+            [
+                'name' => 'John',
+                'department' => 'Sales',
+                'email' => 'john@example.com'
+            ],
+            [
+                'name' => 'Jane',
+                'department' => 'Marketing',
+                'email' => 'jane@example.com'
+            ],
+            [
+                'name' => 'Dave',
+                'department' => 'Marketing',
+                'email' => 'dave@example.com'
+            ],
+        ]);
+
+        // GET:      Associative array
+        $lookup = $employees->mapToAssoc(function ($employee) {
+            return [$employee['email'], $employee['name']];
+        });
+
+        // ASSERT:      Equals
+        $this->assertEquals($expected, $lookup);
+    }
 }
