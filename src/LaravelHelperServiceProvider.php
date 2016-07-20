@@ -17,7 +17,7 @@ class LaravelHelperServiceProvider extends ServiceProvider
 
     public function boot()
     {
-
+        // null
     }
 
 

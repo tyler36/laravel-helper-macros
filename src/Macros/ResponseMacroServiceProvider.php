@@ -36,7 +36,6 @@ class ResponseMacroServiceProvider extends ServiceProvider
                 'message' => $message,
             ], $status);
         });
-
     }
 
 
