@@ -1,4 +1,4 @@
-``# Laravel Helpers
+# Laravel Helpers
 
 ## Installation
 1.Install package through composer.
