@@ -4,7 +4,7 @@
 1.Install package through composer.
 
 ```
-   composer require tyler36/laravel-helpers
+   composer require tyler36/laravel-helper-macros
 ```
 
 
